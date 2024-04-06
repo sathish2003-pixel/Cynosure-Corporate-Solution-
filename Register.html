@@ -10,43 +10,56 @@
         
 body {
    background-image: url(./images/2148200100.jpg);
+  
 }
-
+label{
+    color: whitesmoke;
+}
+.card {
+    backdrop-filter: blur(3px) saturate(200%);
+    -webkit-backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(48, 3, 15, 0.68);
+    border-radius: 12px;
+    border: 1px solid rgba(12, 182, 89, 0.125);
+}
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h2 class="text-center mt-5">Child School Registration</h2>
-                <form  id="registerForm">
-                    <div class="form-group mt-4">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="mobile">Mobile Number</label>
-                        <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="address">Address</label>
-                        <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="image">Upload Image</label>
-                        <input type="file" class="form-control-file" id="image" name="image">
-                    </div>
-                    <div class="form-group mt-3">
-                        <button type="submit" class="btn btn-primary">Register</button>
-                    </div>
-                </form>
+    <div class="card pb-4 mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="text-center mt-5 text-warning">Sunshine School Registration</h2>
+                    <form  id="registerForm">
+                        <div class="form-group mt-4">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="address">Address</label>
+                            <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="image">Upload Image</label>
+                            <input type="file" class="form-control-file" id="image" name="image">
+                        </div>
+                        <div class="form-group mt-3">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+   
     <script>
         document.getElementById('registerForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
