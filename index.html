@@ -6,52 +6,23 @@
  <title>School Website</title>
  <!-- Bootstrap CSS -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <!-- Icons cdn -->
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
  <style>
   .hero {
       background-image: url('./images/main-banner-bg-2.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 100vh; /* Adjust the height as needed */
+      height: 90vh; /* Adjust the height as needed */
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
   }
-  #about {
-        background-color: #f8f9fa; /* Light background color */
-        padding: 50px 0; /* Add padding to the top and bottom */
-    }
-
-    #about h2 {
-        color: #343a40; /* Darker text color for headings */
-        margin-bottom: 30px; /* Add some space below the heading */
-    }
-
-    #about .lead {
-        font-size: 1.25rem; /* Increase the font size of the lead text */
-        color: #6c757d; /* Lighter text color for the lead text */
-        margin-bottom: 20px; /* Add some space below the lead text */
-    }
-
-    #about h3 {
-        color: #343a40; /* Darker text color for subheadings */
-        margin-bottom: 15px; /* Add some space below the subheadings */
-    }
-
-    #about ul {
-        list-style-type: none; /* Remove bullet points */
-        padding-left: 0; /* Remove default padding */
-    }
-
-    #about ul li {
-        padding: 5px 0; /* Add some space between list items */
-    }
-
-    #about p {
-        color: #495057; /* Slightly darker text color for paragraphs */
-        line-height: 1.6; /* Increase line height for better readability */
-    }
+  
     .default-btn {
     display: inline-block;
     padding: 12px 35px;
@@ -65,15 +36,17 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    text-decoration: none;
 }
 
 
+
 </style>
-</head>
+</head> 
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
  <div class="container">
     <a class="navbar-brand" href="#">Sunshine</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,6 +54,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="#about">About Us</a>
         </li>
@@ -94,20 +70,18 @@
     </div>
  </div>
 </nav>
-<source src="assets/img/video/video1.mp4" type="video/mp4">
 
-<header class="hero text-white text-center py-5">
+
+<header class="hero text-white text-center" id="home">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <h1>Welcome to Sunshine</h1>
         <p class="lead">Where Excellence Meets Tradition</p>
         <p class="lead">Discover the difference at Sunshine, where we nurture the minds of tomorrow's leaders.</p>
         <a href="#about" class="btn btn-light btn-lg">Learn More</a>
       </div>
-      <div class="col-lg-4 mt-3">
-        <img src="./images/main-banner-1.png"class="img-fluid">
-      </div>
+    
     </div>
     
   </div>
@@ -121,7 +95,7 @@
 
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12">
-        <img src="./images/who-we-are.jpg" style="border-radius: 2cd0%;" class="img-fluid">
+        <img src="./images/who-we-are.jpg" style="border-radius: 20%;" class="img-fluid">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12">
           <h1>Who we are</h1>
@@ -136,23 +110,6 @@
           </ul>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      <div class="row">
          <div class="col-lg-6">
              <h3>Our Mission</h3>
@@ -190,6 +147,8 @@
           <div class="card-body">
             <h5 class="card-title">Learning discpline</h5>
             <p class="card-text">Our curriculum is designed to be engaging and structured, ensuring that children progress at their own pace. We use a variety of teaching methods, including hands-on activities, storytelling, and interactive learning tools, to make learning fun and effective.</p>
+            <a href="#" class="default-btn">Join Class</a>
+
           </div>
         </div>
       </div>
@@ -199,7 +158,8 @@
           <div class="card-body">
             <h5 class="card-title">Discipline</h5>
             <p class="card-text">Drawing allows children to express their thoughts, feelings, and ideas in a unique and personal way. Through drawing, children can explore their creativity, develop their fine motor skills, and learn to communicate more effectively.</p>
-      
+            <a href="#" class="default-btn">Join Class</a>
+            
           </div>
         </div>
       </div>
@@ -208,14 +168,93 @@
     <!-- cards ends -->
  </div>
 </section>
-
 <!-- Contact Us Section -->
 <section id="contact" class="py-5">
- <div class="container">
-    <h2>Contact Us</h2>
-    <p>Contact information and form...</p>
- </div>
-</section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 col-md-12">
+          <div class="contact-form">
+              <h3>Ready to Get Started?</h3>
+
+              <form id="contactForm" novalidate="true">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-6">
+                          <div class="form-group">
+                              Please enter your name:
+                              <input type="text" name="name" id="name" class="form-control" required="" placeholder="Your name" fdprocessedid="8z9cf">
+
+                          </div>
+                      </div>
+
+                      <div class="col-lg-12 col-md-6">
+                          <div class="form-group">
+                            Please enter your email:
+                              <input type="email" name="email" id="email" class="form-control" required=""  placeholder="Your email address" fdprocessedid="jzecwo">
+                            
+                          </div>
+                      </div>
+
+                      <div class="col-lg-12 col-md-6">
+                        <div class="form-group">
+                          Please enter your Phone number:
+                            <input type="email" name="email" id="email" class="form-control" required="" placeholder="Your email address" fdprocessedid="jzecwo">
+                        </div>
+                    </div>
+                      
+
+                      
+
+                      <div class="col-lg-12 col-md-12">
+                          <div class="form-group">
+                            Comments:
+                              <textarea name="message" id="message" cols="30" rows="5" required="" class="form-control" placeholder="Write your message..."></textarea>
+                             
+                          </div>
+                      </div>
+
+                      <div class="col-lg-12 col-md-12 pt-2">
+                          <button type="submit" class="default-btn disabled" style="cursor: pointer;">Send Message</button>
+                          <div id="msgSubmit" class="h3 text-center hidden"></div>
+                          <div class="clearfix"></div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+<style>
+  .fa-solid{
+    color: red;
+   
+  }
+  .opening-hours{
+  word-spacing: 3px;
+  padding: 5px;
+  }
+</style>
+      <div class="col-lg-5 col-md-12">
+          <div class="contact-information">
+              <h3>Here to Help</h3>
+
+              <ul class="contact-list" style="list-style: none;">
+                  <li><i class="fa-solid fa-location-dot fa-lg  "></i> Location:Wonder Street, USA, New York</li>
+                  <li><i class="fa-solid fa-phone-volume fa-lg"></i> Call Us: <a href="tel:+01321654214">+01 321 654 214</a></li>
+                  <li><i class="fa-solid fa-envelope fa-lg"></i> Email Us: <a href="mailto:hello@ketan.com">hello@ketan.com</a></li>
+                  <li><i class="fa-solid fa-envelope-open-text fa-lg"></i>Fax:<a href="tel:+123456789">+123456789</a></li>
+              </ul>
+
+              <h3>Opening Hours:</h3>
+              <ul class="opening-hours" style="list-style: none;">
+                  <li>Monday:8AM - 6AM</li>
+                  <li>Tuesday:8AM - 6AM</li>
+                  <li>Wednesday:8AM - 6AM</li>
+                  <li>Thursday:8AM - 6AM</li>
+                  <li>Friday:Closed</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </div>
+ </section>
 
 
 <!-- Bootstrap JS -->
