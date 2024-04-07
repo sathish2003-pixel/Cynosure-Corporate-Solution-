@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="user-details-form">
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <py-script>
+        <script type="text/python">
+            from browser import document, html
+            
+            def display_user_details(event):
+                event.preventDefault() # Prevent form submission
+                name = document['name'].value
+                email = document['email'].value
+                age = document['age'].value
+            
+                # Create a table row for the user details
+                row = html.TR()
+                row <= html.TD(name)
+                row <= html.TD(email)
+                row <= html.TD(age)
+            
+                # Add the row to the table
+                table = document['user-details-table']
+                if table is None:
+                    # Create the table if it doesn't exist
+                    table = html.TABLE(id='user-details-table')
+                    table <= html.THEAD(html.TR(html.TH('Name'), html.TH('Email'), html.TH('Age')))
+                    document['output'] <= table
+                table <= row
+            
+            # Attach the event handler to the form
+            document['userForm'].bind('submit', display_user_details)
+            </script>
+    </py-script>
+    <script src="https://pyscript.net/alpha/pyscript.js"></script>
+</body>
+</html>
